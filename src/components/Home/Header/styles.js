@@ -24,7 +24,7 @@ export const Logo = styled(Link)`
   }
 `;
 
-export const SocialMedia = styled.a`
+export const SocialMedia = styled.div`
   img {
     width: 20px;
     height: 20px;
