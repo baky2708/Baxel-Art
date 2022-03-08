@@ -1,7 +1,10 @@
 import styled from 'styled-components';
 
-const Container = styled.div`
+export const Container = styled.div`
   margin: 0 10px;
+  /* display: flex; */
 `;
 
-export default Container;
+export const Main = styled.main`
+  display: flex;
+`;

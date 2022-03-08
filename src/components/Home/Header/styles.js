@@ -5,6 +5,7 @@ export const Container = styled.div`
   height: 40px;
   display: flex;
   align-items: center;
+  margin-bottom: 10px;
 `;
 
 export const Logo = styled(Link)`
