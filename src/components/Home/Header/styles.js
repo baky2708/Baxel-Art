@@ -1,37 +1,33 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 export const Container = styled.div`
-  width: 80vw;
-  margin: 0 auto;
+  height: 40px;
+  display: flex;
+  align-items: center;
 `;
 
-export const NavBar = styled.header`
+export const Logo = styled(Link)`
   & {
-    animation: loadAnimation;
-    animation-duration: 500ms;
-    margin: 30px 0;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 22px;
+    color: #4CAF50;
+    margin-right: 100px;
   }
 
   img {
-    width: 50px;
-  }
-
-  p {
-    margin-right: 30px;
-    font-size: 22px;
-    font-weight: 700;
-  }
-
-  @media (max-width: 600px) {
-    p {
-      display: none;
-    }
+    width: 35px;
+    height: 35px;
+    margin-right: 10px;
   }
 `;
 
-export const Menu = styled.nav`
-  display: flex;
-  align-items: center;
+export const SocialMedia = styled.a`
+  img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+  }
 `;

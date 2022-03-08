@@ -1,29 +1,39 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import {
   Container,
-  NavBar,
-  Menu,
+  Logo,
+  SocialMedia,
 } from './styles';
-import Button from '../../utils/Button';
-import logo from '../../../assets/logo-blue.png';
+import logo from '../../../assets/logo.png';
+import iconGit from '../../../assets/icon-git.svg';
+import iconLinkedin from '../../../assets/icon-linkedin.svg';
 
 function Header() {
   return (
     <Container>
-      <NavBar>
-        <Link to="/">
-          <img src={logo} alt="logo" />
-        </Link>
-        <Menu>
-          <Link to="createaccount">
-            <p>Create account</p>
-          </Link>
-          <Link to="login">
-            <Button>Login</Button>
-          </Link>
-        </Menu>
-      </NavBar>
+      <Logo>
+        <img src={logo} alt="logo" />
+        Baxel Art
+      </Logo>
+      <SocialMedia
+        href="https://github.com/baky2708"
+        target="_blank"
+      >
+        <a
+          href="https://github.com/baky2708"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <img src={iconGit} alt="icon-git" />
+        </a>
+        <a
+          href="https://linkedin.com/in/flavio-baky-isaque"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <img src={iconLinkedin} alt="icon-linkedin" />
+        </a>
+      </SocialMedia>
     </Container>
   );
 }
