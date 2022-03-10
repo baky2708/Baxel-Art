@@ -6,10 +6,12 @@ import {
 } from 'react-router-dom';
 
 import Home from '../pages/Home';
+import ResetCss from '../GlobalStyles/ResetCss';
 
 function Routes() {
   return (
     <BrowserRouter>
+      <ResetCss />
       <Switch>
         <Route path="/" exact component={Home} />
       </Switch>
