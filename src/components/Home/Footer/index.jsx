@@ -1,13 +1,12 @@
 import React from 'react';
-import Header from '../../components/Home/Header';
 import Container from './styles';
 
-function Home() {
+function Footer() {
   return (
     <Container>
-      <Header />
+      <h1>Footer</h1>
     </Container>
   );
 }
 
-export default Home;
+export default Footer;

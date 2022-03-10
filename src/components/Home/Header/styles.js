@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 export const Container = styled.header`
-  background-color: red;
-  height: 100%;
+  background-color: green;
+  height: 60px;
 `;
 
 export const a = 'a';
