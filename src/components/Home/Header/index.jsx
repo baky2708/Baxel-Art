@@ -3,10 +3,10 @@ import {
   Container,
   Menu,
   SearchBar,
-  NavBar,
 } from './styles';
 import Logo from './Logo';
 import LoginBtns from './LoginBtns';
+import NavBar from './NavBar';
 
 function Header() {
   return (
@@ -16,7 +16,7 @@ function Header() {
       </Menu>
       <Logo />
       <SearchBar>search</SearchBar>
-      <NavBar>nav</NavBar>
+      <NavBar />
       <LoginBtns />
     </Container>
   );

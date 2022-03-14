@@ -23,7 +23,8 @@ const Container = styled.button`
 
   &:hover {
     opacity: 0.8;
-    transition: top: -2px;
+    transform: translateY(-2px);
+    transition-duration: 400ms;
   }
 
 ${(props) => {
@@ -44,9 +45,5 @@ ${(props) => {
    margin: 0 auto;
    padding-right: 10px;
  }
-
-  /* @keyframe upBtn { */
-  /*   transition:  */
-  /*  } */
 `;
 export default Container;
