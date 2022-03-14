@@ -2,11 +2,11 @@ import React from 'react';
 import {
   Container,
   Menu,
-  SearchBar,
 } from './styles';
 import Logo from './Logo';
 import LoginBtns from './LoginBtns';
 import NavBar from './NavBar';
+import SearchBar from './SearchBar';
 
 function Header() {
   return (
@@ -15,7 +15,7 @@ function Header() {
         menu
       </Menu>
       <Logo />
-      <SearchBar>search</SearchBar>
+      <SearchBar />
       <NavBar />
       <LoginBtns />
     </Container>

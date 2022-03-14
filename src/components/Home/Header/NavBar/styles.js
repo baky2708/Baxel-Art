@@ -5,6 +5,9 @@ export const Container = styled.nav`
   height: 60px;
   justify-content: space-between;
   align-items: center;
+  @media (max-width: 1020px) {
+    display: none;
+  }
 `;
 
 export const Nav = styled.ul`
