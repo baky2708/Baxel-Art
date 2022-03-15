@@ -2,11 +2,11 @@ import styled from 'styled-components';
 
 const Container = styled.footer`
 background-color: white;
-height: 30px;
-color: black;
+height: 20px;
+color: #44274C;
 display: flex;
 justify-content: center;
-align-center: center;
+align-items: center;
 `;
 
 export default Container;
