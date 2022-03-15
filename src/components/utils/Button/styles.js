@@ -19,6 +19,7 @@ const Container = styled.button`
     display: flex;
     align-items: center;
     padding: 2px 15px;
+    justifi-content: center;
   }
 
   &:hover {
@@ -43,7 +44,7 @@ ${(props) => {
 
   p {
    margin: 0 auto;
-   padding-right: 10px;
+   padding-right: 5px;
  }
 `;
 export default Container;

@@ -5,8 +5,8 @@ import Button from '../../../utils/Button';
 function LoginBtns() {
   return (
     <Container>
-      <Button icon="pencil" type="startDraw">Start Drawing</Button>
-      <Button icon="person" type="loginAccount">Login</Button>
+      <Button icon="pencil" type="startDraw"><p>Start Drawing</p></Button>
+      <Button icon="person" type="loginAccount"><p>Login</p></Button>
     </Container>
   );
 }
