@@ -15,6 +15,7 @@ display: flex;
 justify-content: space-around;
 
 li {
+  cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;

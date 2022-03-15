@@ -4,6 +4,7 @@ const Container = styled.div`
 display: flex;
 align-items: center;
 width: 135px;
+cursor: pointer;
 
   p {
     width: 24px;

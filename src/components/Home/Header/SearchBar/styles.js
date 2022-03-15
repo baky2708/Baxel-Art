@@ -11,8 +11,12 @@ border: 0;
 border-radius: 40px;
 background-color: rgba(200,200,200, .5);
 
+img {
+  cursor:pointer;
+}
+
 @media (max-width: 768px) {
-  width: 30%;
+  width: 35%;
 }
 
 @media (max-width: 700px) {

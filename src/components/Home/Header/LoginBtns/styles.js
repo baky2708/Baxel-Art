@@ -6,8 +6,6 @@ const Container = styled.div`
   justify-content: space-between;
   padding: 0 20px;
 
-  
-
   @media (max-width: 1024px) {
     width: 370px;
 

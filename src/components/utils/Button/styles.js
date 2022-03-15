@@ -20,6 +20,7 @@ const Container = styled.button`
     align-items: center;
     padding: 2px 15px;
     justifi-content: center;
+    cursor: pointer;
   }
 
   &:hover {
