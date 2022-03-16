@@ -4,7 +4,12 @@ import Container from './styles';
 import iconPencil from '../../../assets/icons/icon-pencil.svg';
 import iconPerson from '../../../assets/icons/icon-person.svg';
 
-function Button({ children, icon, type }) {
+function Button({
+  children,
+  icon,
+  type,
+  onClick,
+}) {
   const getIcon = () => {
     switch (icon) {
       case 'pencil': return <img src={iconPencil} alt="icon-pencil" />;
@@ -14,7 +19,7 @@ function Button({ children, icon, type }) {
   };
 
   return (
-    <Container icon={icon} type={type}>
+    <Container icon={icon} type={type} onClick={onClick}>
       {getIcon()}
       {children}
     </Container>

@@ -3,7 +3,7 @@ import Container from './styles';
 
 function Logo() {
   return (
-    <Container>
+    <Container to="/">
       <p>B</p>
       <span>Baxel Art</span>
     </Container>

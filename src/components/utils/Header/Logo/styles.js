@@ -1,6 +1,7 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
-const Container = styled.div`
+const Container = styled(Link)`
 display: flex;
 align-items: center;
 width: 135px;
@@ -22,6 +23,7 @@ cursor: pointer;
 
 span {
   font-size: 20px;
+  color: black;
 }
 `;
 

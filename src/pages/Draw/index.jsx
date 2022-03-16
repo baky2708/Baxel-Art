@@ -1,17 +1,14 @@
 import React from 'react';
 import Header from '../../components/utils/Header';
-import Main from '../../components/Home/Main';
-import Footer from '../../components/Home/Footer';
 import Container from './styles';
 
-function Home() {
+function Draw() {
   return (
     <Container>
       <Header />
-      <Main />
-      <Footer />
+      <p>draw</p>
     </Container>
   );
 }
 
-export default Home;
+export default Draw;
