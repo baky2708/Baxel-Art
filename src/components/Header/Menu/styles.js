@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 export const Container = styled.button`
   & {
@@ -26,8 +27,45 @@ export const Container = styled.button`
 `;
 
 export const SideMenu = styled.div`
-background-color: ${(props) => (props.isOpen ? 'red' : 'blue')};
-overflow-y: hidden;
-width: 40px;
-height: 40px;
+position: absolute;
+top: 60px;
+left: 0;
+background-color: white;
+transform: translateX(${(props) => (props.isOpen ? '-100%' : '0')});
+transition-duration: 400ms;
+width: 205px;
+height: 88vh;
+padding: 20px;
+
+nav ul {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+nav img {
+  width: 20px;
+  height: 20px;
+}
+
+`;
+
+export const Avatar = styled(Link)`
+  & {
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+  }
+
+  &:hover {
+    background-color: rgba(230,230,230, .8);
+  }
 `;
