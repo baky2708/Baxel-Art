@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
+export const Container = styled.button`
   & {
+    border: 0;
     width: 50px;
     height: 40px;
     background-color: #eff1f2;
@@ -24,4 +25,9 @@ export const Container = styled.div`
   }
 `;
 
-export const a = 'a';
+export const SideMenu = styled.div`
+background-color: ${(props) => (props.isOpen ? 'red' : 'blue')};
+overflow-y: hidden;
+width: 40px;
+height: 40px;
+`;

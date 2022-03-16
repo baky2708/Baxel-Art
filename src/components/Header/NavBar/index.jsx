@@ -4,8 +4,8 @@ import {
   Container,
   Nav,
 } from './styles';
-import iconHouse from '../../../../assets/icons/icon-house-yellow.svg';
-import iconBook from '../../../../assets/icons/icon-book-blue.svg';
+import iconHouse from '../../../assets/icons/icon-house-yellow.svg';
+import iconBook from '../../../assets/icons/icon-book-blue.svg';
 
 function NavBar() {
   return (

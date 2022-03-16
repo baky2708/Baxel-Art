@@ -3,7 +3,7 @@ import {
   Container,
   Input,
 } from './styles';
-import iconFind from '../../../../assets/icons/icon-find-black.svg';
+import iconFind from '../../../assets/icons/icon-find-black.svg';
 
 function NavBar() {
   return (

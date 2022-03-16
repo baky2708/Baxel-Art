@@ -1,8 +1,7 @@
 import styled from 'styled-components';
 
-const Container = styled.main`
-display: flex;
-flex: 1;
+const Container = styled.div`
+  border: 3px solid red;
 `;
 
 export default Container;

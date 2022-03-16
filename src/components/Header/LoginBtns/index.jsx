@@ -1,7 +1,7 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
 import Container from './styles';
-import Button from '../../Button';
+import Button from '../../utils/Button';
 
 function LoginBtns() {
   const history = useHistory();
