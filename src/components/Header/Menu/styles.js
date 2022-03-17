@@ -36,6 +36,9 @@ transition-duration: 400ms;
 width: 205px;
 height: 88vh;
 padding: 20px;
+display: flex;
+flex-direction: column;
+align-items: center;
 
 nav ul {
   margin-top: 20px;
@@ -57,12 +60,15 @@ export const Avatar = styled(Link)`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-bottom: 60px;
+    width: 80%;
+    height: 30%;
   }
 
   img {
     width: 80px;
     height: 80px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
   }
 
   &:hover {
