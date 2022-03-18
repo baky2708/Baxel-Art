@@ -1,8 +1,8 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 import Container from './styles';
-import iconPencil from '../../../assets/icons/icon-pencil.svg';
-import iconPerson from '../../../assets/icons/icon-person.svg';
+import iconPencil from '../../assets/icons/icon-pencil.svg';
+import iconPerson from '../../assets/icons/icon-person.svg';
 
 function Button({
   children,
