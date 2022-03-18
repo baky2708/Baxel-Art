@@ -26,7 +26,6 @@ function Board() {
   for (let i = 0; i < boardArea; i += 1) {
     pixels.push(<Pixel
       onMouseDown={() => setDrawOn(true)}
-      // onClick={() => setDrawOn(true)}
       onMouseUp={() => setDrawOn(false)}
       onMouseMove={drawing}
       id={i}
