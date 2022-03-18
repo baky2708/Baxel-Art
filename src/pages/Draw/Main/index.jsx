@@ -10,8 +10,8 @@ import {
 function Main() {
   return (
     <Container>
-      <Board />
       <BoardTools />
+      <Board />
       <BoardMenu />
     </Container>
   );
