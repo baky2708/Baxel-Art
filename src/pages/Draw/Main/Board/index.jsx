@@ -14,7 +14,6 @@ function Board() {
   const boardHeight = MAX_BOARD - 1;
   const boardArea = boardWidth * boardHeight;
   const pixels = [];
-  // const pixels = new Array(boardArea.fill(1));
 
   const drawing = ({ target }) => {
     if (drawOn) {
