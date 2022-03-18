@@ -1,10 +1,10 @@
 import React from 'react';
 import Header from '../../components/Header';
-import Main from '../../components/pages/Home/Main';
 import Footer from '../../components/Footer';
+import Main from '../../components/pages/Draw/Main';
 import Container from './styles';
 
-function Home() {
+function Draw() {
   return (
     <Container>
       <Header />
@@ -14,4 +14,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default Draw;
