@@ -5,6 +5,9 @@ const GlobalStyles = createGlobalStyle`
   box-sizing: border-box;
   font-family: 'Quicksand', sans-serif;
 }
+main {
+  height: 88vh;
+}
 `;
 
 export default GlobalStyles;
