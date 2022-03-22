@@ -5,30 +5,50 @@ import {
 } from './styles';
 
 import Pixel from './Pixel';
+import { useDraw } from '../../../../context/Provider';
 
 function Board() {
-  const boardSize = 10;
-  const line = [];
-  const lines = [];
+  const { size } = useDraw();
 
-  for (let i = 0; i < boardSize; i += 1) {
-    line.push(
-      <Pixel id={i} key={i} />,
-    );
-  }
-
-  for (let i = 0; i < boardSize; i += 1) {
-    if (i % 2 === 0) {
-      lines.push(line);
-    } else {
-      lines.push(line.slice().reverse());
+  const createLine = (sizeBoard) => {
+    const line = [];
+    for (let i = 0; i < sizeBoard; i += 1) {
+      line.push(
+        <Pixel id={i} key={i} size={sizeBoard} />,
+      );
     }
-  }
+    return line;
+  };
+
+  const paintInitialOddPixel = (sizeBoard) => {
+    const line = createLine(sizeBoard * sizeBoard);
+    return line;
+  };
+
+  const paintInitialEvenPixel = (sizeBoard) => {
+    const board = [];
+    const line = createLine(sizeBoard);
+    for (let i = 0; i < sizeBoard; i += 1) {
+      if (i % 2 === 0) {
+        board.push(line);
+      } else {
+        board.push(line.slice().reverse());
+      }
+    }
+    return board;
+  };
+
+  const drawBoard = (sizeBoard) => {
+    if (sizeBoard % 2 === 0) return paintInitialEvenPixel(size);
+    return paintInitialOddPixel(size);
+  };
+
+  const board = drawBoard(size);
 
   return (
     <Container>
       <BoardContainer>
-        {lines.map((e) => e)}
+        {board.map((e) => e)}
       </BoardContainer>
     </Container>
   );

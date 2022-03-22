@@ -1,9 +1,12 @@
 import React from 'react';
 import Routes from './routes';
+import { Provider } from './context/Provider';
 
 function App() {
   return (
-    <Routes />
+    <Provider>
+      <Routes />
+    </Provider>
   );
 }
 
