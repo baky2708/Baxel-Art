@@ -4,7 +4,7 @@ import Container from './styles';
 function BoardMenu() {
   return (
     <Container>
-      <p>board menu</p>
+      <input />
     </Container>
   );
 }

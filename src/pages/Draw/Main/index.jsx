@@ -1,7 +1,7 @@
 import React from 'react';
 import Board from './Board';
-import BoardTools from './BoardTools';
 import BoardMenu from './BoardMenu';
+import BoardTools from './BoardTools';
 
 import {
   Container,
@@ -10,8 +10,8 @@ import {
 function Main() {
   return (
     <Container>
-      <Board />
       <BoardTools />
+      <Board />
       <BoardMenu />
     </Container>
   );
