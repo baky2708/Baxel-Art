@@ -13,14 +13,18 @@ export const Container = styled.div`
 export const BoardContainer = styled.div`
 width: ${boardSize}px;
 height: ${boardSize}px;
-background-color: red;
+background-color: white;
 display:flex;
 flex-wrap: wrap;
+align-content: start;
 `;
 
-export const Pixel = styled.div`
-width: ${boardSize / 2}px;
-height: ${boardSize / 2}px;
-  background-color: white;
-border: 1px solid black;
+export const Pixel = styled.canvas`
+background-color: red;
+width: 10px;
+height: 10px;
+style {
+  width
+}
+
 `;

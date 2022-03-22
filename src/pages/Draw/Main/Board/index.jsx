@@ -1,47 +1,34 @@
-/* eslint-disable max-len */
-import React, { useState } from 'react';
+import React from 'react';
 import {
   Container,
   BoardContainer,
-  Pixel,
 } from './styles';
 
+import Pixel from './Pixel';
+
 function Board() {
-  const [drawOn, setDrawOn] = useState(false);
-  // const MIN_BOARD = 15;
-  const MAX_BOARD = 2;
-  const boardWidth = MAX_BOARD;
-  const boardHeight = MAX_BOARD;
-  const boardArea = boardWidth * boardHeight;
-  const pixels = [];
+  const boardSize = 10;
+  const line = [];
+  const lines = [];
 
-  const drawing = ({ target }) => {
-    if (drawOn) {
-      target.setAttribute('style', 'background-color: black;');
-      target.setAttribute('style', 'opacity: 1;');
-    }
-  };
-
-  for (let i = 0; i < boardArea; i += 1) {
-    pixels.push(
-      <Pixel
-        onMouseDown={() => setDrawOn(true)}
-        onMouseUp={() => setDrawOn(false)}
-      // onMouseLeave={() => setDrawOn(false)}
-        onMouseMove={drawing}
-        onClick={drawing}
-        id={i}
-        color={i}
-        key={i}
-        size={50}
-      />,
+  for (let i = 0; i < boardSize; i += 1) {
+    line.push(
+      <Pixel id={i} key={i} />,
     );
+  }
+
+  for (let i = 0; i < boardSize; i += 1) {
+    if (i % 2 === 0) {
+      lines.push(line);
+    } else {
+      lines.push(line.slice().reverse());
+    }
   }
 
   return (
     <Container>
       <BoardContainer>
-        {pixels.map((e) => e)}
+        {lines.map((e) => e)}
       </BoardContainer>
     </Container>
   );
