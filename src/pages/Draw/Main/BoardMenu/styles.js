@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 const Container = styled.div`
   width: 260px;
-  background-color: grey;
+  background-color: #ddd;
 `;
 
 export default Container;

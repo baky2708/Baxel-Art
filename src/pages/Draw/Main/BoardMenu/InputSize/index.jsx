@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useDraw } from '../../../../../context/Provider';
+import Container from './styles';
 
 function InputSize() {
   const { size, setSize } = useDraw();
@@ -14,10 +15,12 @@ function InputSize() {
   }, [inputValue]);
 
   return (
-    <label htmlFor="size">
-      size
-      <input type="number" onChange={onChange} value={inputValue} />
-    </label>
+    <Container>
+      <label htmlFor="size">
+        <p>Board Size</p>
+        <input type="number" onChange={onChange} value={inputValue} />
+      </label>
+    </Container>
   );
 }
 
