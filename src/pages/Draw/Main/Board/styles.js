@@ -11,10 +11,10 @@ export const Container = styled.div`
 `;
 
 export const BoardContainer = styled.div`
-width: ${boardSize}px;
-height: ${boardSize}px;
-background-color: white;
-display:flex;
-flex-wrap: wrap;
-align-content: start;
+  width: ${boardSize}px;
+  height: ${boardSize}px;
+  background-color: white;
+  display:flex;
+  flex-wrap: wrap;
+  align-content: start;
 `;

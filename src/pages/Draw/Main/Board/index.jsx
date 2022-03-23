@@ -3,44 +3,44 @@ import {
   Container,
   BoardContainer,
 } from './styles';
-
 import Pixel from './Pixel';
+
 import { useDraw } from '../../../../context/Provider';
 
 function Board() {
   const { size } = useDraw();
 
-  const createLine = (sizeBoard) => {
-    const line = [];
+  const createRow = (sizeBoard) => {
+    const row = [];
     for (let i = 0; i < sizeBoard; i += 1) {
-      line.push(
+      row.push(
         <Pixel id={i} key={i} size={sizeBoard} />,
       );
     }
-    return line;
+    return row;
   };
 
   const paintInitialOddPixel = (sizeBoard) => {
-    const line = createLine(sizeBoard * sizeBoard);
-    return line;
+    const board = createRow(sizeBoard * sizeBoard);
+    return board;
   };
 
   const paintInitialEvenPixel = (sizeBoard) => {
     const board = [];
-    const line = createLine(sizeBoard);
+    const row = createRow(sizeBoard);
     for (let i = 0; i < sizeBoard; i += 1) {
       if (i % 2 === 0) {
-        board.push(line);
+        board.push(row);
       } else {
-        board.push(line.slice().reverse());
+        board.push(row.slice().reverse());
       }
     }
     return board;
   };
 
   const drawBoard = (sizeBoard) => {
-    if (sizeBoard % 2 === 0) return paintInitialEvenPixel(size);
-    return paintInitialOddPixel(size);
+    if (sizeBoard % 2 === 0) return paintInitialEvenPixel(sizeBoard);
+    return paintInitialOddPixel(sizeBoard);
   };
 
   const board = drawBoard(size);

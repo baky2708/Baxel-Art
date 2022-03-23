@@ -1,14 +1,14 @@
 /* eslint-disable react/jsx-no-constructed-context-values */
 /* eslint-disable react/prop-types */
-import React, { useState, useMemo, useContext } from 'react';
+import React, { useState, useContext } from 'react';
 import Context from './Context';
 
 export function Provider({ children }) {
   const [size, setSize] = useState(10);
-  const contextValue = useMemo(() => ({
+  const contextValue = {
     size,
     setSize,
-  }), []);
+  };
 
   return (
     <Context.Provider value={contextValue}>
