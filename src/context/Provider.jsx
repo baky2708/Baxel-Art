@@ -5,9 +5,12 @@ import Context from './Context';
 
 export function Provider({ children }) {
   const [size, setSize] = useState(10);
+  const [selectedColor, setSelectedColor] = useState('black');
   const contextValue = {
     size,
     setSize,
+    selectedColor,
+    setSelectedColor,
   };
 
   return (

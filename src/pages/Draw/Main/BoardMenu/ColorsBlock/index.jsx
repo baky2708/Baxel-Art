@@ -1,11 +1,15 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   Container,
   ColorsContainer,
   Colors,
 } from './styles';
 
-function ColorsBrock() {
+import { useDraw } from '../../../../../context/Provider';
+
+function ColorsBlock() {
+  const { setSelectedColor } = useDraw();
+  const [randomColor, setRandomColor] = useState();
   const rainbowColors = [
     '#9400D3',
     '#4B0082',
@@ -25,19 +29,31 @@ function ColorsBrock() {
     return colors;
   };
 
-  const randomColors = generateRandomColors();
+  const onClick = ({ target }) => {
+    const colors = document.querySelectorAll('.colorsPallet');
+    colors.forEach((e) => e.classList.remove('selected'));
+    setSelectedColor(target.id);
+    target.classList.add('selected');
+  };
+
+  useEffect(() => {
+    setRandomColor(generateRandomColors());
+  }, []);
+
   return (
     <Container>
       <p>Rainbow Colors</p>
       <ColorsContainer>
-        {rainbowColors.map((e) => <Colors key={e} bgColor={e} />)}
+        {rainbowColors.map((e) => (
+          <Colors onClick={onClick} className="colorsPallet" isSelected={false} key={e} bgColor={e} />))}
       </ColorsContainer>
       <p>Random Colors</p>
       <ColorsContainer>
-        {randomColors && randomColors.map((e) => <Colors key={e} bgColor={e} />)}
+        {randomColor && randomColor.map((e) => (
+          <Colors id={e} key={e} bgColor={e} />))}
       </ColorsContainer>
     </Container>
   );
 }
 
-export default ColorsBrock;
+export default ColorsBlock;

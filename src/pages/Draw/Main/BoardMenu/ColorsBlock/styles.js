@@ -9,6 +9,9 @@ export const Container = styled.div`
     flex-direction: column;
     flex-wrap: wrap;
   }
+  .selected {
+    border: 1px solid #fff;
+  }
 `;
 
 export const ColorsContainer = styled.div`
@@ -24,9 +27,10 @@ export const Colors = styled.div`
     height: 20px;
     margin: 2px 1px;
     border: 1px solid #111;
-  }
 
   &:hover {
     border: 1px solid #fff;
+    padding: 1px;
   }
+
 `;

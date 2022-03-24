@@ -5,7 +5,9 @@ import {
 } from './styles';
 import Pixel from './Pixel';
 
-import { useDraw } from '../../../../context/Provider';
+import {
+  useDraw,
+} from '../../../../context/Provider';
 
 function Board() {
   const { size } = useDraw();
@@ -43,11 +45,15 @@ function Board() {
     return paintInitialOddPixel(sizeBoard);
   };
 
+  const paint = ({ target }) => {
+    console.log(target.bgColor);
+  };
+
   const board = drawBoard(size);
 
   return (
     <Container>
-      <BoardContainer>
+      <BoardContainer onClick={paint}>
         {board.map((e) => e)}
       </BoardContainer>
     </Container>
