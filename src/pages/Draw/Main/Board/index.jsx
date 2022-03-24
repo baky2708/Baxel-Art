@@ -45,16 +45,10 @@ function Board() {
     return paintInitialOddPixel(sizeBoard);
   };
 
-  const paint = ({ target }) => {
-    console.log(target.bgColor);
-  };
-
-  const board = drawBoard(size);
-
   return (
     <Container>
-      <BoardContainer onClick={paint}>
-        {board.map((e) => e)}
+      <BoardContainer>
+        {drawBoard(size).map((e) => e)}
       </BoardContainer>
     </Container>
   );

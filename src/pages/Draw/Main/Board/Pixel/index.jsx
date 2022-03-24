@@ -1,12 +1,26 @@
 /* eslint-disable react/prop-types */
-import React from 'react';
+import React, { useState } from 'react';
 import Container from './style';
 import { useDraw } from '../../../../../context/Provider';
 
-function Pixel({ index, id }) {
-  const { size } = useDraw();
+function Pixel({ id }) {
+  const [bgColor, setBgColor] = useState();
+  const [isPainted, setIsPainted] = useState(false);
+  const { size, selectedColor } = useDraw();
+  const paint = () => {
+    setBgColor(selectedColor);
+    setIsPainted(true);
+  };
   return (
-    <Container key={index} id={id} size={size} />
+    <Container
+      onClick={paint}
+      bgColor={bgColor}
+      key={id}
+      id={id}
+      size={size}
+      painted={isPainted}
+      className="pixelsBoard"
+    />
   );
 }
 

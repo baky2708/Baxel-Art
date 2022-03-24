@@ -45,12 +45,12 @@ function ColorsBlock() {
       <p>Rainbow Colors</p>
       <ColorsContainer>
         {rainbowColors.map((e) => (
-          <Colors onClick={onClick} className="colorsPallet" isSelected={false} key={e} bgColor={e} />))}
+          <Colors onClick={onClick} className="colorsPallet" id={e} key={e} bgColor={e} />))}
       </ColorsContainer>
       <p>Random Colors</p>
       <ColorsContainer>
         {randomColor && randomColor.map((e) => (
-          <Colors id={e} key={e} bgColor={e} />))}
+          <Colors onClick={onClick} className="colorsPallet" id={e} key={e} bgColor={e} />))}
       </ColorsContainer>
     </Container>
   );
