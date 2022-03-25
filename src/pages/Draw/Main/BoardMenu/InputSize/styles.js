@@ -16,6 +16,14 @@ const Container = styled.div`
   input {
     font-size: 18px;
     width: 50%;
+    margin-bottom: 10px;
+  }
+  
+  button {
+    width: 80%;
+    margin-left: 15px;
+    margin-bottom: 10px;
+
   }
 `;
 

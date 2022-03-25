@@ -1,9 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useDraw } from '../../../../../context/Provider';
 import Container from './styles';
 
 function InputSize() {
-  const { size, setSize, reset } = useDraw();
+  const {
+    size, setSize, setReset, reset,
+  } = useDraw();
   const [inputValue, setInputValue] = useState(size);
 
   const onChange = ({ target }) => {
@@ -11,12 +13,12 @@ function InputSize() {
   };
 
   const resetBoard = () => {
-    setSize(size + 1);
+    setReset(reset + 1);
   };
 
-  useEffect(() => {
-    console.log(reset);
-  }, [reset]);
+  const changeBoardSize = () => {
+    setSize(inputValue);
+  };
 
   return (
     <Container>
@@ -24,6 +26,7 @@ function InputSize() {
         <p>Board Size</p>
         <input type="number" onChange={onChange} value={inputValue} />
       </label>
+      <button onClick={changeBoardSize} type="button">Change</button>
       <button onClick={resetBoard} type="button">Reset</button>
     </Container>
   );

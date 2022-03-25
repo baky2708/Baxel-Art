@@ -10,7 +10,7 @@ export const Container = styled.div`
     flex-wrap: wrap;
   }
   .selected {
-    border: 8px solid #333;
+    border: 4px solid #333;
   }
 `;
 
