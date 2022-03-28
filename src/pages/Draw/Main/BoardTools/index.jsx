@@ -3,6 +3,7 @@ import Container from './styles';
 import ColorsSelection from './ColorsSelection';
 import Pencil from './Pencil';
 import Erase from './Erase';
+import Help from './Help';
 
 function BoardTools() {
   return (
@@ -10,6 +11,7 @@ function BoardTools() {
       <Pencil />
       <Erase />
       <ColorsSelection />
+      <Help />
     </Container>
   );
 }

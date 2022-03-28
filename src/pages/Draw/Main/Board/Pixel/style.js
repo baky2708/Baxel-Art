@@ -18,6 +18,16 @@ const Container = styled.div`
     opacity: 0.8;
   }
 
+  @media (max-width: 850px) {
+    width: ${({ size }) => 400 / size}px;
+    height: ${({ size }) => 400 / size}px;
+  }
+
+  @media (max-width: 650px) {
+    width: ${({ size }) => 250 / size}px;
+    height: ${({ size }) => 250 / size}px;
+  }
+
 `;
 
 export default Container;

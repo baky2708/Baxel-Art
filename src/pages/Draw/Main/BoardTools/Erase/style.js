@@ -14,6 +14,11 @@ img {
   width: 80%;
   height: 80%;
 }
+
+  @media (max-width: 650px) {
+    width: 30px;
+    height: 30px;
+  }
 `;
 
 export default Container;

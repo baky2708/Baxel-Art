@@ -18,6 +18,12 @@ p {
   color: white;
   font-size: 24px;
 }
+
+  @media (max-width: 850px) {
+    p {
+      font-size: 18px;
+    }
+  }
 `;
 
 export const ColorsContainer = styled.div`
@@ -42,5 +48,10 @@ export const Colors = styled.div`
     transition-duration: 200ms;
     padding: 1px;
     background-color: white; 
+  }
+
+  @media (max-width: 850px) {
+    width: 30px;
+    height: 30px;
   }
 `;
