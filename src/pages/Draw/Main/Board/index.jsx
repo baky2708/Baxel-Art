@@ -70,6 +70,7 @@ function Board() {
           setButtonPressed(2);
           event.preventDefault();
         }}
+        tabIndex="0"
       >
         {drawBoard(size).map((e) => e)}
       </BoardContainer>

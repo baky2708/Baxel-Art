@@ -13,8 +13,12 @@ function Pencil() {
   useEffect(() => {
     setSelected(selectedTool);
   }, [selectedTool]);
+
   return (
-    <Container selected={selected} onClick={selectTool}>
+    <Container
+      selected={selected}
+      onClick={selectTool}
+    >
       <img id="pencil" src={iconPencil} alt="pencil-tool" />
     </Container>
   );
