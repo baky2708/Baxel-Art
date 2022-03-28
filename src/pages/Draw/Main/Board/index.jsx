@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import {
   Container,
   BoardContainer,
@@ -10,7 +10,14 @@ import {
 } from '../../../../context/Provider';
 
 function Board() {
-  const { size, setStartPaint, setStartErase } = useDraw();
+  const boardContainer = useRef();
+  const {
+    size,
+    setStartPaint,
+    setStartErase,
+    refBoard,
+    setRefBoard,
+  } = useDraw();
 
   const createRow = (sizeBoard) => {
     const row = [];
@@ -45,6 +52,10 @@ function Board() {
     return paintInitialOddPixel(sizeBoard);
   };
 
+  useEffect(() => {
+    setRefBoard(boardContainer);
+  }, []);
+
   return (
     <Container>
       <BoardContainer
@@ -57,6 +68,7 @@ function Board() {
         }}
         onDragStart={(event) => event.preventDefault()}
         onMouseUp={() => setStartPaint(false)}
+        ref={refBoard}
       >
         {drawBoard(size).map((e) => e)}
       </BoardContainer>

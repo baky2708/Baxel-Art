@@ -5,6 +5,7 @@ import Context from './Context';
 
 export function Provider({ children }) {
   const [size, setSize] = useState(10);
+  const [refBoard, setRefBoard] = useState();
   const [startPaint, setStartPaint] = useState(false);
   const [startErase, setStartErase] = useState(false);
   const [selectedTool, setSelectedTool] = useState('pencil');
@@ -29,6 +30,8 @@ export function Provider({ children }) {
     setStartPaint,
     startErase,
     setStartErase,
+    refBoard,
+    setRefBoard,
   };
 
   return (
