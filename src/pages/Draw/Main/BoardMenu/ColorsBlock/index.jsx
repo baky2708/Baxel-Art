@@ -8,8 +8,8 @@ import {
 import { useDraw } from '../../../../../context/Provider';
 
 function ColorsBlock() {
-  const { setSelectedColor } = useDraw();
-  const [randomColor, setRandomColor] = useState();
+  const { setPrimaryColor, setSecoundColor } = useDraw();
+  const [randomColors, setRandomColors] = useState();
   const rainbowColors = [
     '#9400D3',
     '#4B0082',
@@ -18,6 +18,11 @@ function ColorsBlock() {
     '#FFFF00',
     '#FF7F00',
     '#FF0000',
+  ];
+
+  const defaultColors = [
+    'black',
+    'white',
   ];
 
   const generateRandomColors = () => {
@@ -29,15 +34,23 @@ function ColorsBlock() {
     return colors;
   };
 
-  const onClick = ({ target }) => {
+  const onLeftClick = ({ target }) => {
     const colors = document.querySelectorAll('.colorsPallet');
     colors.forEach((e) => e.classList.remove('selected'));
-    setSelectedColor(target.id);
+    setPrimaryColor(target.id);
     target.classList.add('selected');
   };
 
+  const onRightClick = (event) => {
+    const colors = document.querySelectorAll('.colorsPallet');
+    colors.forEach((e) => e.classList.remove('selected'));
+    setSecoundColor(event.target.id);
+    event.target.classList.add('selected');
+    event.preventDefault();
+  };
+
   useEffect(() => {
-    setRandomColor(generateRandomColors());
+    setRandomColors(generateRandomColors());
   }, []);
 
   return (
@@ -45,12 +58,41 @@ function ColorsBlock() {
       <p>Rainbow Colors</p>
       <ColorsContainer>
         {rainbowColors.map((e) => (
-          <Colors onClick={onClick} className="colorsPallet" id={e} key={e} bgColor={e} />))}
+          <Colors
+            onClick={onLeftClick}
+            onContextMenu={onRightClick}
+            className="colorsPallet"
+            id={e}
+            key={e}
+            bgColor={e}
+          />
+        ))}
       </ColorsContainer>
       <p>Random Colors</p>
       <ColorsContainer>
-        {randomColor && randomColor.map((e) => (
-          <Colors onClick={onClick} className="colorsPallet" id={e} key={e} bgColor={e} />))}
+        {randomColors && randomColors.map((e) => (
+          <Colors
+            onClick={onLeftClick}
+            onContextMenu={onRightClick}
+            className="colorsPallet"
+            id={e}
+            key={e}
+            bgColor={e}
+          />
+        ))}
+      </ColorsContainer>
+      <p>Default Colors</p>
+      <ColorsContainer>
+        {defaultColors && defaultColors.map((e) => (
+          <Colors
+            onClick={onLeftClick}
+            onContextMenu={onRightClick}
+            className="colorsPallet"
+            id={e}
+            key={e}
+            bgColor={e}
+          />
+        ))}
       </ColorsContainer>
     </Container>
   );

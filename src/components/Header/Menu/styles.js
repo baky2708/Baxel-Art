@@ -6,7 +6,7 @@ export const Container = styled.button`
     border: 0;
     width: 50px;
     height: 40px;
-    background-color: #eff1f2;
+    background-color: ${({ color }) => (color ? '#555' : '#eff1f2')};
     display: flex;
     justify-content: center;
     align-items: center;

@@ -7,7 +7,7 @@ import Container from './styles';
 function Draw() {
   return (
     <Container>
-      <Header />
+      <Header color="#444" />
       <Main />
       <Footer />
     </Container>

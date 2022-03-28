@@ -6,11 +6,50 @@ import { useDraw } from '../../../../../context/Provider';
 function Pixel({ id }) {
   const [bgColor, setBgColor] = useState();
   const [isPainted, setIsPainted] = useState(false);
-  const { reset, size, selectedColor } = useDraw();
+  const {
+    reset,
+    size,
+    primaryColor,
+    secoundColor,
+    selectedTool,
+  } = useDraw();
 
-  const paint = () => {
-    setBgColor(selectedColor);
+  const paintPrimaryColor = () => {
+    setBgColor(primaryColor);
     setIsPainted(true);
+  };
+
+  const paintSecoundColor = () => {
+    setBgColor(secoundColor);
+    setIsPainted(true);
+  };
+
+  const erase = () => {
+    setIsPainted(false);
+    setBgColor('grey');
+  };
+
+  const onLeftClick = () => {
+    switch (selectedTool) {
+      case 'pencil': paintPrimaryColor();
+        break;
+      case 'erase': erase();
+        break;
+      default:
+        break;
+    }
+  };
+
+  const onRightClick = (event) => {
+    switch (selectedTool) {
+      case 'pencil': paintSecoundColor();
+        break;
+      case 'erase': erase();
+        break;
+      default:
+        break;
+    }
+    event.preventDefault();
   };
 
   useEffect(() => {
@@ -20,7 +59,8 @@ function Pixel({ id }) {
 
   return (
     <Container
-      onClick={paint}
+      onClick={onLeftClick}
+      onContextMenu={onRightClick}
       bgColor={bgColor}
       key={id}
       id={id}

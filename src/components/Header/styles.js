@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.header`
-  background-color: white;
+  background-color: ${({ color }) => (color || 'white')};
   display: flex;
   height: 60px;
   justify-content: space-between;

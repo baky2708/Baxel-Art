@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+/* eslint-disable react/prop-types */
+import React from 'react';
 import {
   Container,
   SideMenu,
@@ -7,20 +8,22 @@ import {
 import Nav from './Nav';
 import iconMenu from '../../../assets/icons/icon-menu-black.svg';
 import avatar from '../../../assets/avatar.svg';
+import { useDraw } from '../../../context/Provider';
 
-function Menu() {
-  const [isOpen, setIsOpen] = useState(true);
+function Menu({ color }) {
+  const { openMenu, setOpenMenu } = useDraw();
+  // const [isOpen, setIsOpen] = useState(true);
 
   const toggle = () => {
-    setIsOpen(!isOpen);
+    setOpenMenu(!openMenu);
   };
 
   return (
     <>
-      <Container onClick={toggle}>
+      <Container color={color} onClick={toggle}>
         <img src={iconMenu} alt="icon-menu" />
       </Container>
-      <SideMenu isOpen={isOpen}>
+      <SideMenu isOpen={openMenu}>
         <Avatar to="/login">
           <img src={avatar} alt="avatar" />
           <p>Login</p>

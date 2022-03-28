@@ -1,10 +1,15 @@
 import React from 'react';
 import Container from './styles';
+import ColorsSelection from './ColorsSelection';
+import Pencil from './Pencil';
+import Erase from './Erase';
 
 function BoardTools() {
   return (
     <Container>
-      <p>board tools</p>
+      <Pencil />
+      <Erase />
+      <ColorsSelection />
     </Container>
   );
 }

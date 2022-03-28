@@ -5,15 +5,24 @@ import Context from './Context';
 
 export function Provider({ children }) {
   const [size, setSize] = useState(10);
+  const [selectedTool, setSelectedTool] = useState('erase');
   const [reset, setReset] = useState(0);
-  const [selectedColor, setSelectedColor] = useState('black');
+  const [openMenu, setOpenMenu] = useState(true);
+  const [primaryColor, setPrimaryColor] = useState('black');
+  const [secoundColor, setSecoundColor] = useState('white');
   const contextValue = {
     size,
     setSize,
-    selectedColor,
-    setSelectedColor,
+    primaryColor,
+    setPrimaryColor,
+    secoundColor,
+    setSecoundColor,
     reset,
     setReset,
+    openMenu,
+    setOpenMenu,
+    selectedTool,
+    setSelectedTool,
   };
 
   return (

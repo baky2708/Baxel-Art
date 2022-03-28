@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 import {
   Container,
@@ -8,12 +9,12 @@ import NavBar from './NavBar';
 import SearchBar from './SearchBar';
 import Menu from './Menu';
 
-function Header() {
+function Header({ color }) {
   return (
-    <Container>
-      <Menu />
+    <Container color={color}>
+      <Menu color={color} />
       <Logo />
-      <SearchBar />
+      <SearchBar color={color} />
       <NavBar />
       <LoginBtns />
     </Container>

@@ -9,7 +9,7 @@ height: 40%;
 padding: 20px;
 border: 0;
 border-radius: 40px;
-background-color: rgba(200,200,200, .5);
+background-color: #C8C8C8;
 
 img {
   cursor:pointer;
@@ -28,7 +28,7 @@ export const Input = styled.input`
 width: 100%;
 height: 40px;
 border: 0;
-background-color: rgba(250,250,250, .05);
+background-color: #C8C8C8;
 color: rgb(80,80,80);
 
 &:focus {

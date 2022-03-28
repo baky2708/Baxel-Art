@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-/* background-color: red; */
   & {
     display: flex;
     justify-content: center;
@@ -9,9 +8,16 @@ export const Container = styled.div`
     flex-direction: column;
     flex-wrap: wrap;
   }
-  .selected {
-    border: 4px solid #333;
-  }
+
+    .selected {
+      border: 3px solid white;
+      padding: 1px;
+    }
+
+p {
+  color: white;
+  font-size: 24px;
+}
 `;
 
 export const ColorsContainer = styled.div`
@@ -19,6 +25,7 @@ export const ColorsContainer = styled.div`
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  margin-bottom: 20px;
 `;
 
 export const Colors = styled.div`
@@ -31,7 +38,7 @@ export const Colors = styled.div`
     border-radius: 50%;
   }
   &:hover {
-    border: 8px solid ${({ bgColor }) => bgColor};
+    border: 5px solid ${({ bgColor }) => bgColor};
     transition-duration: 200ms;
     padding: 1px;
     background-color: white; 
