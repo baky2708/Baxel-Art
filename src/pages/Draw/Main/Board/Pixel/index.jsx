@@ -6,6 +6,7 @@ import { useDraw } from '../../../../../context/Provider';
 
 function Pixel({ id }) {
   const [bgColor, setBgColor] = useState();
+  const { buttonPressed } = useDraw();
   // const [startPaint, setStartPaint] = useState(false);
   const [isPainted, setIsPainted] = useState(true);
   const {
@@ -43,7 +44,7 @@ function Pixel({ id }) {
     }
   };
 
-  const onRightClick = (event) => {
+  const onRightClick = () => {
     switch (selectedTool) {
       case 'pencil': paintSecoundColor();
         break;
@@ -52,7 +53,6 @@ function Pixel({ id }) {
       default:
         break;
     }
-    event.preventDefault();
   };
 
   useEffect(() => {
@@ -60,11 +60,30 @@ function Pixel({ id }) {
     setBgColor('grey');
   }, [reset]);
 
+  const onOver = (pressed) => {
+    if (pressed === 1) {
+      onLeftClick();
+    }
+    if (pressed === 2) {
+      onRightClick();
+    }
+  };
+
   return (
     <Container
-      onMouseDown={onLeftClick}
-      onMouseOver={startPaint ? onLeftClick : undefined}
-      onContextMenu={startPaint ? onRightClick : undefined}
+      onMouseDown={() => {
+        onLeftClick();
+      }}
+      onMouseOver={() => {
+        if (startPaint) {
+          onOver(buttonPressed);
+        }
+      }}
+      onContextMenu={() => {
+        if (startPaint) {
+          onRightClick();
+        }
+      }}
       bgColor={bgColor}
       key={id}
       id={id}

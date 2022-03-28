@@ -14,7 +14,7 @@ function Board() {
   const {
     size,
     setStartPaint,
-    setStartErase,
+    setButtonPressed,
     refBoard,
     setRefBoard,
   } = useDraw();
@@ -59,16 +59,17 @@ function Board() {
   return (
     <Container>
       <BoardContainer
-        onMouseDown={(event) => {
-          if (event.button === 0) {
-            setStartPaint(true);
-          } else {
-            setStartErase(true);
-          }
+        onMouseDown={() => {
+          setStartPaint(true);
+          setButtonPressed(1);
         }}
         onDragStart={(event) => event.preventDefault()}
         onMouseUp={() => setStartPaint(false)}
         ref={refBoard}
+        onContextMenu={(event) => {
+          setButtonPressed(2);
+          event.preventDefault();
+        }}
       >
         {drawBoard(size).map((e) => e)}
       </BoardContainer>

@@ -7,7 +7,7 @@ export function Provider({ children }) {
   const [size, setSize] = useState(10);
   const [refBoard, setRefBoard] = useState();
   const [startPaint, setStartPaint] = useState(false);
-  const [startErase, setStartErase] = useState(false);
+  const [buttonPressed, setButtonPressed] = useState(0);
   const [selectedTool, setSelectedTool] = useState('pencil');
   const [reset, setReset] = useState(0);
   const [openMenu, setOpenMenu] = useState(true);
@@ -28,8 +28,8 @@ export function Provider({ children }) {
     setSelectedTool,
     startPaint,
     setStartPaint,
-    startErase,
-    setStartErase,
+    buttonPressed,
+    setButtonPressed,
     refBoard,
     setRefBoard,
   };
