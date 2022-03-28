@@ -62,6 +62,7 @@ function Pixel({ id }) {
 
   return (
     <Container
+      onMouseDown={onLeftClick}
       onMouseOver={startPaint ? onLeftClick : undefined}
       onContextMenu={startPaint ? onRightClick : undefined}
       bgColor={bgColor}
