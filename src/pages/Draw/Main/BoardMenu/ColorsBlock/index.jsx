@@ -55,7 +55,10 @@ function ColorsBlock() {
 
   return (
     <Container>
-      <p>Rainbow Colors</p>
+      <p>
+        Rainbow
+        <span> Colors</span>
+      </p>
       <ColorsContainer>
         {rainbowColors.map((e) => (
           <Colors
@@ -68,7 +71,10 @@ function ColorsBlock() {
           />
         ))}
       </ColorsContainer>
-      <p>Random Colors</p>
+      <p>
+        Random
+        <span> Colors</span>
+      </p>
       <ColorsContainer>
         {randomColors && randomColors.map((e) => (
           <Colors
@@ -81,7 +87,10 @@ function ColorsBlock() {
           />
         ))}
       </ColorsContainer>
-      <p>Default Colors</p>
+      <p>
+        Default
+        <span> Colors</span>
+      </p>
       <ColorsContainer>
         {defaultColors && defaultColors.map((e) => (
           <Colors

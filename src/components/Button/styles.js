@@ -47,5 +47,12 @@ ${(props) => {
    margin: 0 auto;
    padding-right: 5px;
  }
+
+   @media (max-width: 460px) {
+     p {
+       font-size: 12px;
+     }
+     margin-top: 40px;
+   }
 `;
 export default Container;

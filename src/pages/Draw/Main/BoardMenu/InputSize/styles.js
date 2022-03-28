@@ -36,6 +36,15 @@ const Container = styled.div`
     background-color: #222;
 
   }
+
+  @media (max-width: 460px) {
+    font-size: 14px;
+
+    button {
+
+    font-size: 14px;
+    }
+  }
 `;
 
 export default Container;
