@@ -10,7 +10,7 @@ import {
 } from '../../../../context/Provider';
 
 function Board() {
-  const { size } = useDraw();
+  const { size, setStartPaint, setStartErase } = useDraw();
 
   const createRow = (sizeBoard) => {
     const row = [];
@@ -47,7 +47,17 @@ function Board() {
 
   return (
     <Container>
-      <BoardContainer>
+      <BoardContainer
+        onMouseDown={(event) => {
+          if (event.button === 0) {
+            setStartPaint(true);
+          } else {
+            setStartErase(true);
+          }
+        }}
+        onDragStart={(event) => event.preventDefault()}
+        onMouseUp={() => setStartPaint(false)}
+      >
         {drawBoard(size).map((e) => e)}
       </BoardContainer>
     </Container>

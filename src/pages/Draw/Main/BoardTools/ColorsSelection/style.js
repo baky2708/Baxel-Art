@@ -1,11 +1,13 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-background-color: #444;
-height: 100px;
-display: flex;
-justify-content: center;
-align-items: center;
+  background-color: #444;
+  width: 90px;
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px
 `;
 
 export const PrimaryColor = styled.div`

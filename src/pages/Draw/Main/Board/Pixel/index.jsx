@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 import React, { useState, useEffect } from 'react';
 import Container from './style';
@@ -5,13 +6,15 @@ import { useDraw } from '../../../../../context/Provider';
 
 function Pixel({ id }) {
   const [bgColor, setBgColor] = useState();
-  const [isPainted, setIsPainted] = useState(false);
+  // const [startPaint, setStartPaint] = useState(false);
+  const [isPainted, setIsPainted] = useState(true);
   const {
     reset,
     size,
     primaryColor,
     secoundColor,
     selectedTool,
+    startPaint,
   } = useDraw();
 
   const paintPrimaryColor = () => {
@@ -59,8 +62,8 @@ function Pixel({ id }) {
 
   return (
     <Container
-      onClick={onLeftClick}
-      onContextMenu={onRightClick}
+      onMouseOver={startPaint ? onLeftClick : undefined}
+      onContextMenu={startPaint ? onRightClick : undefined}
       bgColor={bgColor}
       key={id}
       id={id}

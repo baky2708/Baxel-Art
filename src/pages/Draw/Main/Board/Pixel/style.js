@@ -15,7 +15,6 @@ const Container = styled.div`
   }
 
   &:hover {
-    /* background-color: grey; */
     opacity: 0.8;
   }
 

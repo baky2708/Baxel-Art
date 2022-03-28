@@ -5,7 +5,9 @@ import Context from './Context';
 
 export function Provider({ children }) {
   const [size, setSize] = useState(10);
-  const [selectedTool, setSelectedTool] = useState('erase');
+  const [startPaint, setStartPaint] = useState(false);
+  const [startErase, setStartErase] = useState(false);
+  const [selectedTool, setSelectedTool] = useState('pencil');
   const [reset, setReset] = useState(0);
   const [openMenu, setOpenMenu] = useState(true);
   const [primaryColor, setPrimaryColor] = useState('black');
@@ -23,6 +25,10 @@ export function Provider({ children }) {
     setOpenMenu,
     selectedTool,
     setSelectedTool,
+    startPaint,
+    setStartPaint,
+    startErase,
+    setStartErase,
   };
 
   return (
