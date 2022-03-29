@@ -3,7 +3,8 @@ import styled from 'styled-components';
 const Container = styled.footer`
 & {
   background-color: white;
-  height: 20px;
+  width: 100%;
+  height: 18px;
   color: #44274C;
   display: flex;
   justify-content: center;
@@ -14,6 +15,11 @@ span {
 }
 img {
   margin-left: 10px;
+}
+@media (max-width: 450px) {
+  p, span {
+    font-size: 15px;
+  }
 }
 `;
 

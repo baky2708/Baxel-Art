@@ -6,7 +6,7 @@ const GlobalStyles = createGlobalStyle`
   font-family: 'Quicksand', sans-serif;
 }
 main {
-  height: 88vh;
+  height: 87vh;
 }
 `;
 

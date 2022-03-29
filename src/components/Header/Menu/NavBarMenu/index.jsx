@@ -6,8 +6,9 @@ import {
 } from './styles';
 import iconHouse from '../../../../assets/icons/icon-house-yellow.svg';
 import iconBook from '../../../../assets/icons/icon-book-blue.svg';
+import iconAbout from '../../../../assets/icons/icon-about.svg';
 
-function NavBar() {
+function NavBarMenu() {
   return (
     <Container>
       <Nav>
@@ -23,9 +24,15 @@ function NavBar() {
             <p>Gallery</p>
           </li>
         </Link>
+        <Link to="/about">
+          <li>
+            <img src={iconAbout} alt="icon-house" />
+            <p>About</p>
+          </li>
+        </Link>
       </Nav>
     </Container>
   );
 }
 
-export default NavBar;
+export default NavBarMenu;

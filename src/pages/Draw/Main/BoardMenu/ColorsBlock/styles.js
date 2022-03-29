@@ -22,7 +22,6 @@ p {
 @media (max-width: 850px) {
   p {
     font-size: 18px;
-    text-align: center;
   }
 }
 

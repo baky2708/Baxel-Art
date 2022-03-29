@@ -5,7 +5,7 @@ import {
   SideMenu,
   Avatar,
 } from './styles';
-import Nav from './Nav';
+import NavBarMenu from './NavBarMenu';
 import iconMenu from '../../../assets/icons/icon-menu-black.svg';
 import avatar from '../../../assets/avatar.svg';
 import { useDraw } from '../../../context/Provider';
@@ -28,7 +28,7 @@ function Menu({ color }) {
           <img src={avatar} alt="avatar" />
           <p>Login</p>
         </Avatar>
-        <Nav />
+        <NavBarMenu />
       </SideMenu>
     </>
   );
