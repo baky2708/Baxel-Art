@@ -39,7 +39,7 @@ padding: 20px;
 display: flex;
 flex-direction: column;
 align-items: center;
-index-z: 999;
+z-index: 999;
 
 nav ul {
   margin-top: 20px;
