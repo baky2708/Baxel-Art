@@ -38,6 +38,9 @@ export const Main = styled.main`
   width: auto;
   margin: 0 20px;
 }
+@media (max-width: 768px) {
+  height: auto;
+}
 `;
 
 export const Section = styled.section`
@@ -50,5 +53,8 @@ export const AboutProjectSection = styled.section`
 & {
   margin-top: 20px;
   display: flex;
+}
+@media (max-width: 768px) {
+  flex-direction: column;
 }
 `;

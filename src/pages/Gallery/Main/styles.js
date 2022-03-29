@@ -13,12 +13,22 @@ h1 {
   font-size: 30px;
   align-self: center;
 }
+@media (max-width: 800px) {
+  width: auto;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+}
 `;
 
 export const ImageContainer = styled.div`
 & {
   display: flex;
   justify-content: center;
+}
+@media (max-width: 800px) {
+  flex-direction: column;
+  height: auto;
 }
 `;
 
@@ -58,5 +68,9 @@ img {
 button {
   width: auto;
   margin: 0 auto;
+}
+
+@media (max-width: 800px) {
+  height: auto;
 }
 `;

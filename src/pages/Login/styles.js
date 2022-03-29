@@ -20,10 +20,6 @@ p {
   font-size: 18px;
   margin-bottom: 5px;
 }
-img {
-  height: 60%;
-  width: 40%;
-}
 span {
   font-weight: 700;
 }

@@ -27,14 +27,14 @@ export const Container = styled.button`
 `;
 
 export const SideMenu = styled.div`
-position: absolute;
+position: fixed;
 top: 60px;
 left: 0;
 background-color: white;
 transform: translateX(${(props) => (props.isOpen ? '-100%' : '0')});
 transition-duration: 400ms;
 width: 205px;
-height: 88vh;
+height: 95vh;
 padding: 20px;
 display: flex;
 flex-direction: column;

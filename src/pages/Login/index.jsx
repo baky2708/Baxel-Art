@@ -17,7 +17,7 @@ function Home() {
       <Header />
       <Main>
         <h1>Sorry!</h1>
-        <p>The login page is merely ilustrative...</p>
+        <p>The login page and SearchBar is merely ilustrative...</p>
         <p>But you have more time for create your art!</p>
         <img src={sadImage} alt="sad-img" />
         <p>
