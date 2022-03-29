@@ -17,9 +17,9 @@ function Routes() {
       <ResetCss />
       <GlobalStyles />
       <Switch>
-        <Route path="/Baxel-Art" exact component={Home} />
-        <Route path="/Baxel-Art/draw" exact component={Draw} />
-        <Route path="/Baxel-Art/gallery" exact component={Gallery} />
+        <Route path="/" exact component={Home} />
+        <Route path="/draw" exact component={Draw} />
+        <Route path="/gallery" exact component={Gallery} />
       </Switch>
     </BrowserRouter>
   );
