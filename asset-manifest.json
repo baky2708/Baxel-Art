@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/Baxel-Art/static/js/main.eeaf6ba3.js",
+    "main.js": "/Baxel-Art/static/js/main.be661449.js",
     "static/media/avatar.svg": "/Baxel-Art/static/media/avatar.10548124ad9d54523157758da78c47e7.svg",
     "static/media/icon-book-blue.svg": "/Baxel-Art/static/media/icon-book-blue.9aedee47dbeda05daeacee37c926f682.svg",
     "static/media/icon-person.svg": "/Baxel-Art/static/media/icon-person.3b3e05ee65dcfc688ea3df37602a7898.svg",
@@ -11,9 +11,9 @@
     "static/media/icon-erase-black.svg": "/Baxel-Art/static/media/icon-erase-black.266c35ad5af094ab2746c40bff62b869.svg",
     "index.html": "/Baxel-Art/index.html",
     "static/media/icon-menu-black.svg": "/Baxel-Art/static/media/icon-menu-black.b50672bd153501b355ab156f501f16bf.svg",
-    "main.eeaf6ba3.js.map": "/Baxel-Art/static/js/main.eeaf6ba3.js.map"
+    "main.be661449.js.map": "/Baxel-Art/static/js/main.be661449.js.map"
   },
   "entrypoints": [
-    "static/js/main.eeaf6ba3.js"
+    "static/js/main.be661449.js"
   ]
 }
