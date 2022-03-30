@@ -61,7 +61,7 @@ function About() {
                 <li>5) React Component Export Image</li>
                 <li>6) Eslint AirBnB</li>
                 <li>7) Netlify</li>
-                <li><span>8) (and Obviously) Nvim 7.0</span></li>
+                <li><span>8) (and Obviously) Nvim v0.7.0</span></li>
               </ul>
             </Section>
             <Section>
